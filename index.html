@@ -1,37 +1,26 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Juego1 - Macroquad</title>
+    <title>Qantu's Journey</title>
+    <meta name="author" content="Retromantis">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+        content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no, shrink-to-fit=no">
     <style>
-        html,
         body {
             margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
             overflow: hidden;
-            background: black;
-        }
-
-        canvas {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
+            background: #000;
+            touch-action: none;
         }
     </style>
+    <script src="js/michi.js"></script>
+    <script src="js/boot.js"></script>
+    <script src="js/game.js"></script>
 </head>
 
 <body>
-    <canvas id="glcanvas" tabindex='1'></canvas>
-    <!-- Incluye el JS oficial de Macroquad -->
-    <script src="js/mq_js_bundle.js"></script>
-    <!-- <script src="https://not-fl3.github.io/miniquad-samples/mq_js_bundle.js"></script> -->
-    <script>
-        // Carga tu archivo .wasm compilado
-        load("release/juego1.wasm");
-    </script>
 </body>
 
 </html>

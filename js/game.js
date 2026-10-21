@@ -486,8 +486,16 @@ game_scene.keyUp = function (event) {
 }
 
 game_scene.touchStart = function (x, y) {
-    this.startX = x;
-    this.startY = y;
+    switch (this.state) {
+        case GAME_PLAYING:
+            this.add(this.spawn_shot(this.player.x + (this.player.width >> 1) - (this.SHOT_WDT >> 1), this.player.y));
+            break;
+        case GAME_OVER:
+            this.start();
+            break;
+    }
+    // this.startX = x;
+    // this.startY = y;
 }
 
 game_scene.touchEnd = function (x, y) {

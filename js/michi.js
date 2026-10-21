@@ -1,8 +1,8 @@
 /**
  * Minimalist 2D game engine
  * @author Victor Zegarra (Retromantis)
- * @date 26/03/2026
- * @version 1.04
+ * @date 20/10/2026
+ * @version 1.05
  */
 
 const GAME_FPS = 25;
@@ -588,7 +588,7 @@ MiSprite.prototype.animate = function () {
             } else if (this.frameAnimLoop) {
                 this.frameAnimIndex = 0;
             } else {
-                this.onEndAnimation(this.frameAnimTag);
+                this.onAnimationEnd(this.frameAnimTag);
             }
             this.frameIndex = this.frameAnim[this.frameAnimIndex];
             this.updateCollider();
@@ -598,7 +598,7 @@ MiSprite.prototype.animate = function () {
     }
 }
 
-MiSprite.prototype.onEndAnimation = function (tag) { }
+MiSprite.prototype.onAnimationEnd = function (tag) { }
 
 MiSprite.prototype.draw = function (context) {
     if (this.isVisible && this.frameIndex >= 0) {

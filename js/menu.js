@@ -15,9 +15,15 @@ menu_scene.create = function () {
 }
 
 menu_scene.keyDown = function (event) {
-    game.startScene('game');
+    this.start_scene();
 }
 
 menu_scene.touchStart = function (x, y) {
+    this.start_scene();
+}
+
+menu_scene.start_scene = function () {
+    bg_music.pause();
+    bg_music.currentTime = 0;
     game.startScene('game');
 }
